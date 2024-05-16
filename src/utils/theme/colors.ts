@@ -3,5 +3,5 @@ export const primary = {
     2: '#A1A1A1',
     3: '#EEEEEE',
     white: '#FFF',
-    black: '#000',
+    black: '#212121',
 };
