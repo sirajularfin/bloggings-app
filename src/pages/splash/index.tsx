@@ -1,32 +1,33 @@
 import React, {useEffect} from 'react';
-import {Text, View} from 'react-native';
-import styles from './styles';
-import CircledPencil from '../../assets/icons/circledPencil';
+import {View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {ROUTE_USER_REGISTRATION} from '../../navigation/routes';
 import {NativeStackNavigationProp} from '@react-navigation/native-stack';
+import styles from './styles';
+import {ROUTE_ONBOARDING} from '../../navigation/routes';
 import {RootStackParamList} from '../../navigation/appNavigator';
+import Logo from '../../components/logo';
 
 const SplashPage = () => {
-    const navigation =
-        useNavigation<NativeStackNavigationProp<RootStackParamList, 'UserRegistration'>>();
-    useEffect(() => {
-        const timeoutId = setTimeout(() => {
-            // Navigate to another screen after 5 seconds
-            navigation.navigate(ROUTE_USER_REGISTRATION);
-        }, 5000);
-        // Clean up the timeout on component unmount
-        return () => clearTimeout(timeoutId);
-    }, [navigation]);
+	const classes = styles();
+	const navigation =
+		useNavigation<
+			NativeStackNavigationProp<RootStackParamList, 'UserRegistration'>
+		>();
 
-    const classes = styles();
+	useEffect(() => {
+		const timeoutId = setTimeout(() => {
+			// Navigate to another screen after 5 seconds
+			navigation.navigate(ROUTE_ONBOARDING);
+		}, 2000);
+		// Clean up the timeout on component unmount
+		return () => clearTimeout(timeoutId);
+	}, [navigation]);
 
-    return (
-        <View style={classes.container}>
-            <Text style={classes.logoText}>Bloggings</Text>
-            <CircledPencil style={classes.logoIcon} width={24} height={24} />
-        </View>
-    );
+	return (
+		<View style={classes.container}>
+			<Logo fontSize={48} iconSize={21} isIconRequired={true} />
+		</View>
+	);
 };
 
 export default SplashPage;
