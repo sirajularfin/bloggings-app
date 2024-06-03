@@ -1,12 +1,12 @@
 import {StyleSheet} from 'react-native';
 import {theme} from '../../utils/theme';
+import {horizontalScale} from '../../utils/metrics';
 
 const styles = () => {
 	return StyleSheet.create({
-		container: {
-			flex: 1,
-			backgroundColor: theme.colors.primary.white,
-			justifyContent: 'center',
+		text: {
+			fontFamily: theme.fonts.inter.regular,
+			marginHorizontal: horizontalScale(5),
 		},
 	});
 };

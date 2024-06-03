@@ -6,9 +6,15 @@ import OnboardingLogo from '../../assets/icons/onboardingLogo';
 import {horizontalScale, verticalScale} from '../../utils/metrics';
 import Button from '../../components/button';
 import {ButtonType} from '../../utils/constants';
+import {useNavigation} from '@react-navigation/native';
+import {ROUTE_LOGIN} from '../../navigation/routes';
+import {RootStackParamList} from '../../navigation/appNavigator';
+import {NativeStackNavigationProp} from '@react-navigation/native-stack';
 
 const OnboardingPage = () => {
 	const classes = styles();
+	const navigation =
+		useNavigation<NativeStackNavigationProp<RootStackParamList, 'Login'>>();
 
 	return (
 		<View style={classes.container}>
@@ -28,8 +34,8 @@ const OnboardingPage = () => {
 				Create a unique blog to pulish your passion, your way.
 			</Text>
 			<Button
-				text="Continue"
-				onPress={() => console.log('NULL')}
+				title="Continue"
+				onPress={() => navigation.navigate(ROUTE_LOGIN)}
 				type={ButtonType.Primary}
 			/>
 		</View>
