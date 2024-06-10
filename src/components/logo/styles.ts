@@ -1,6 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {primary} from '../../utils/theme/colors';
-import {openSans} from '../../utils/theme/fonts';
+import {theme} from '../../utils/theme';
 
 const styles = () => {
 	return StyleSheet.create({
@@ -9,8 +8,8 @@ const styles = () => {
 			justifyContent: 'center',
 		},
 		logoText: {
-			color: primary.black,
-			fontFamily: openSans.bold,
+			color: theme.colors.primary.black,
+			fontFamily: theme.fonts.openSans.bold,
 			textAlign: 'center',
 		},
 		logoIcon: {

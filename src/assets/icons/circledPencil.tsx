@@ -2,7 +2,7 @@ import * as React from 'react';
 import {SvgCss} from 'react-native-svg/css';
 
 export default ({...props}: any) => {
-    const xml = `
+	const xml = `
     <svg
         width="24"
         height="24"
@@ -14,5 +14,5 @@ export default ({...props}: any) => {
             fill="#212121"
         />
     </svg>`;
-    return <SvgCss xml={xml} width="100%" height="100%" {...props} />;
+	return <SvgCss xml={xml} width="100%" height="100%" {...props} />;
 };

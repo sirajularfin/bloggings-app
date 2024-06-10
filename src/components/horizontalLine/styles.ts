@@ -1,12 +1,14 @@
 import {StyleSheet} from 'react-native';
+import {verticalScale} from '../../utils/metrics';
 import {theme} from '../../utils/theme';
 
 const styles = () => {
 	return StyleSheet.create({
-		container: {
+		line: {
+			backgroundColor: theme.colors.grey[900],
 			flex: 1,
-			backgroundColor: theme.colors.primary.white,
-			justifyContent: 'center',
+			height: verticalScale(1),
+			width: '100%',
 		},
 	});
 };

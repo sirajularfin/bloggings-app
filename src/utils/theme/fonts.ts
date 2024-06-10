@@ -5,6 +5,8 @@ export const openSans = {
 
 export const inter = {
 	medium: 'Inter-Medium',
+	regular: 'Inter-Regular',
+	semiBold: 'Inter-SemiBold',
 };
 
 export const jost = {
