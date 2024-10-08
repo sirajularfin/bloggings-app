@@ -1,0 +1,11 @@
+node_modules
+*/**/__tests__
+**/generated/*
+**/*.xml
+ios/**/*
+android/**/*
+**/temp
+*.config.js
+.eslintrc.js
+jest-setup.js
+coverage
