@@ -1,10 +1,10 @@
-import {useWindowDimensions} from 'react-native';
+import { useWindowDimensions } from 'react-native';
 
 /**
  * @description
  * For more details visit: https://medium.com/simform-engineering/create-responsive-design-in-react-native-f84522a44365
  */
-const {width, height} = useWindowDimensions();
+const { width, height } = useWindowDimensions();
 
 const guidelineBaseWidth = 375;
 const guidelineBaseHeight = 812;
@@ -17,6 +17,6 @@ const verticalScale = (size: number) => (height / guidelineBaseHeight) * size;
 
 // For font-size, borderRadius and likewise.
 const moderateScale = (size: number, factor: number = 0.5) =>
-	size + (horizontalScale(size) - size) * factor;
+  size + (horizontalScale(size) - size) * factor;
 
-export {horizontalScale, verticalScale, moderateScale};
+export { horizontalScale, verticalScale, moderateScale };
