@@ -1,4 +1,7 @@
-export const ROUTE_HOME = 'Home';
-export const ROUTE_USER_REGISTRATION = 'UserRegistration';
-export const ROUTE_ONBOARDING = 'Onboarding';
-export const ROUTE_LOGIN = 'Login';
+export enum Route {
+  SAMPLE = 'SAMPLE',
+  HOME = 'HOME',
+  REGISTRATION = 'REGISTRATION',
+  ONBOARDING = 'ONBOARDING',
+  LOGIN = 'LOGIN',
+}
