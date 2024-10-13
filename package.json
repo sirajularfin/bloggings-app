@@ -9,7 +9,8 @@
     "start": "react-native start",
     "test": "jest",
     "lint:fix": "eslint . --fix",
-    "format:fix": "prettier 'src/**/*.{ts,tsx,json}' --write"
+    "format:fix": "prettier 'src/**/*.{ts,tsx,json}' --write",
+    "postinstall": "cd ios && pod install && cd .."
   },
   "dependencies": {
     "@react-navigation/native": "^6.1.17",
